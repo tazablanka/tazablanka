@@ -1,0 +1,18 @@
+ALGORITHM three
+VAR
+    c:CHAR;
+    ch:STRING:="";
+    nw: INTEGER:=1;
+    len,nv: INTEGER:=0;
+BEGIN
+    REPEAT
+        Read(c);
+        ch:=ch+c;
+        len:=len+1;
+    SWITCH (c) DO
+        case " " : nw=nw+1;
+        BREAK
+        case "a",case "A",case "e",case "E",case "i",case "I",case "o",case "O",case "u",case "U",: nv=nv+1;
+    END_SWITCH
+UNTIL ( c ="." )
+END
